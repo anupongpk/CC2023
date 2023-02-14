@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Scratch</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      //create element
+      //option 1
+      //   const h1 = React.createElement(
+      //     "h1",
+      //     { className: "main" },
+      //     "React from scratch"
+      //   );
+
+      //   const btn = React.createElement("button", {}, "Addd");
+
+      //option2 (complie ผ่าน Babel จะ complie แปลง โค้ด html เป็นโค้ด javascript ที่คอมพิวเตอร์เข้าใจ )
+      const mainContainer = (
+        <div>
+          <h1>React from scratch</h1>
+          <button>Add</button>
+        </div>
+      );
+      //create Root
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      //render element
+      root.render(mainContainer);
+    </script>
+  </body>
+</html>
